@@ -1,8 +1,9 @@
 # Python Project Management Tool
 
-A command-line project management application built with Python. It allows users to manage projects, assign tasks, track task progress, and store information in a JSON database.
+This is a command-line project management application built with Python. 
+It allows users to manage projects, assign tasks, track task progress, and store information in a JSON database.
 
-The project uses realistic Kenyan examples, including a tea farmers' cooperative, an M-Pesa shop, and a fresh produce delivery service.
+The project uses Kenyan local examples, including a tea farmers' cooperative, an M-Pesa shop, and a fresh produce delivery service.
 
 ## Features
 
@@ -147,7 +148,6 @@ python3 main.py --help
 
 ## Sample Use Cases
 
-The application includes sample data representing practical local projects:
 
 - **Tea Farmers' Cooperative:** Record farmer information, track tea deliveries, and prepare payment reports.
 - **M-Pesa Shop:** Track daily sales, cash transactions, and stock levels.
@@ -172,11 +172,7 @@ The current local test run passed all 7 tests.
 ## Future Improvements
 
 - Generate project and task summary reports.
-- Add deadline reminders.
-- Improve search and filtering options.
-- Expand automated test coverage.
-- Add CSV export functionality.
-- Develop a graphical or web-based interface.
+- Add deadline reminders and also Improve search and filtering options.
 
 ## Author
 
