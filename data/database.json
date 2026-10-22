@@ -1,33 +1,126 @@
+
 {
     "users": [
         {
             "id": 1,
-            "name": "Alex",
-            "email": "alex@example.com",
-            "project_ids": [
-                1
-            ]
+            "name": "Wanjiku Mwangi",
+            "email": "wanjiku.mwangi@example.com",
+            "project_ids": [1, 2]
+        },
+        {
+            "id": 2,
+            "name": "Brian Kiptoo",
+            "email": "brian.kiptoo@example.com",
+            "project_ids": [1, 3]
+        },
+        {
+            "id": 3,
+            "name": "Akinyi Otieno",
+            "email": "akinyi.otieno@example.com",
+            "project_ids": [2, 3]
+        },
+        {
+            "id": 4,
+            "name": "Kevin Mutua",
+            "email": "kevin.mutua@example.com",
+            "project_ids": [3]
+        },
+        {
+            "id": 5,
+            "name": "Njeri Kamau",
+            "email": "njeri.kamau@example.com",
+            "project_ids": [1, 2]
         }
     ],
     "projects": [
         {
             "id": 1,
-            "title": "CLI Tool",
-            "description": "",
-            "due_date": "",
+            "title": "Kericho Tea Farmers Cooperative Records",
+            "description": "Manage farmer registrations, tea deliveries, weighing records and payment tracking for a local tea cooperative.",
+            "due_date": "2026-12-15",
             "user_id": 1,
-            "task_ids": [
-                1
-            ]
+            "task_ids": [1, 2, 3]
+        },
+        {
+            "id": 2,
+            "title": "M-Pesa Shop Daily Sales Tracker",
+            "description": "Help a local shop track daily sales, M-Pesa payments, cash transactions and stock levels.",
+            "due_date": "2026-11-30",
+            "user_id": 3,
+            "task_ids": [4, 5, 6]
+        },
+        {
+            "id": 3,
+            "title": "Nakuru Fresh Produce Delivery Service",
+            "description": "Coordinate deliveries of potatoes, tomatoes, onions and other produce from farmers to local markets and shops.",
+            "due_date": "2027-01-20",
+            "user_id": 2,
+            "task_ids": [7, 8, 9]
         }
     ],
     "tasks": [
         {
             "id": 1,
-            "title": "Implement add-task",
+            "title": "Register tea farmers and record their details",
             "status": "completed",
             "assigned_to": 1,
             "project_id": 1
+        },
+        {
+            "id": 2,
+            "title": "Record daily tea deliveries and weights",
+            "status": "in-progress",
+            "assigned_to": 2,
+            "project_id": 1
+        },
+        {
+            "id": 3,
+            "title": "Prepare monthly farmer payment reports",
+            "status": "pending",
+            "assigned_to": 5,
+            "project_id": 1
+        },
+        {
+            "id": 4,
+            "title": "Record daily M-Pesa and cash sales",
+            "status": "completed",
+            "assigned_to": 3,
+            "project_id": 2
+        },
+        {
+            "id": 5,
+            "title": "Update shop stock for flour, sugar and cooking oil",
+            "status": "in-progress",
+            "assigned_to": 5,
+            "project_id": 2
+        },
+        {
+            "id": 6,
+            "title": "Prepare the weekly sales summary",
+            "status": "pending",
+            "assigned_to": 1,
+            "project_id": 2
+        },
+        {
+            "id": 7,
+            "title": "Collect produce orders from local shops",
+            "status": "completed",
+            "assigned_to": 2,
+            "project_id": 3
+        },
+        {
+            "id": 8,
+            "title": "Coordinate potato and tomato deliveries",
+            "status": "in-progress",
+            "assigned_to": 4,
+            "project_id": 3
+        },
+        {
+            "id": 9,
+            "title": "Confirm deliveries and update customer records",
+            "status": "pending",
+            "assigned_to": 3,
+            "project_id": 3
         }
     ]
 }
