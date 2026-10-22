@@ -1,163 +1,183 @@
-# Python Project Management CLI Tool
+# Python Project Management Tool
 
-A beginner-friendly Python command-line application for managing users, projects, and tasks.
+A command-line project management application built with Python. It allows users to manage projects, assign tasks, track task progress, and store information in a JSON database.
+
+The project uses realistic Kenyan examples, including a tea farmers' cooperative, an M-Pesa shop, and a fresh produce delivery service.
 
 ## Features
 
-- Create and list users.
-- Create, list, search, and update projects.
-- Create, list, update, and complete tasks.
+- Add and list users.
+- Create, view, search, and update projects.
 - Assign projects to users.
+- Create and list tasks.
 - Assign tasks to users.
-- Persist data locally using JSON.
-- Use `argparse` for CLI commands.
-- Use `rich` for readable terminal output.
-- Use classes, inheritance, properties, class attributes, and relationships.
-- Include unit tests with pytest.
+- Update task details and status.
+- Mark tasks as completed.
+- Store project data in a JSON file.
+- Display information using Rich tables.
+- Validate user input and test functionality with pytest.
+
+## Technologies Used
+
+- Python 3
+- Object-Oriented Programming (OOP)
+- argparse for command-line arguments
+- Rich for formatted terminal output
+- JSON for data storage
+- pytest for automated testing
 
 ## Project Structure
 
 ```text
-project-management-cli/
-├── main.py
-├── models/
-│   ├── __init__.py
-│   ├── person.py
-│   ├── user.py
-│   ├── project.py
-│   └── task.py
-├── utils/
-│   ├── __init__.py
-│   └── storage.py
+python_project_management_tool/
 ├── data/
 │   └── database.json
+├── models/
 ├── tests/
-│   ├── __init__.py
-│   ├── test_models.py
-│   └── test_cli.py
-├── requirements.txt
+├── utils/
+├── main.py
 ├── Pipfile
+├── requirements.txt
 └── README.md
 ```
 
-## Setup
+## Installation
 
-Create and activate a virtual environment:
+### 1. Clone the repository
 
 ```bash
-python -m venv venv
+git clone https://github.com/RozelineGitau/python_project_management_tool.git
 ```
 
-Linux/macOS:
+### 2. Navigate to the project directory
+
+```bash
+cd python_project_management_tool
+```
+
+### 3. Create a virtual environment
+
+```bash
+python3 -m venv venv
+```
+
+### 4. Activate the virtual environment
+
+On Linux or macOS:
 
 ```bash
 source venv/bin/activate
 ```
 
-Windows:
+On Windows:
 
 ```bash
 venv\Scripts\activate
 ```
 
-Install dependencies:
+### 5. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run the CLI
+## Usage
 
-Show help:
+Run the application from the project root directory.
 
-```bash
-python main.py --help
-```
-
-### Add a user
+### View available commands
 
 ```bash
-python main.py add-user --name "Alex" --email "alex@example.com"
+python3 main.py --help
 ```
 
-### List users
+### Manage users
+
+List users:
 
 ```bash
-python main.py list-users
+python3 main.py list-users
 ```
 
-### Add a project
+Add a user:
 
 ```bash
-python main.py add-project --user "Alex" --title "CLI Tool" --description "Build a project tracker" --due-date "2026-12-01"
+python3 main.py add-user --name "Wanjiku Mwangi" --email "wanjiku.mwangi@example.com"
 ```
 
-### List projects
+### Manage projects
+
+List projects:
 
 ```bash
-python main.py list-projects
+python3 main.py list-projects
 ```
 
-### List projects for one user
+Search for projects:
 
 ```bash
-python main.py list-projects --user "Alex"
+python3 main.py search-projects --keyword Kericho
 ```
 
-### Search projects
+List projects associated with a user:
 
 ```bash
-python main.py search-projects --keyword "CLI"
+python3 main.py list-projects --user 1
 ```
 
-### Add a task
+### Manage tasks
+
+List all tasks:
 
 ```bash
-python main.py add-task --project "CLI Tool" --title "Implement add-task" --assigned-to "Alex"
+python3 main.py list-tasks
 ```
 
-### List tasks
+List tasks for a project:
 
 ```bash
-python main.py list-tasks
+python3 main.py list-tasks --project 1
 ```
 
-### Complete a task
+Use the help command to see the required arguments and optional fields for creating projects, adding tasks, updating records, and completing tasks.
 
 ```bash
-python main.py complete-task --task "Implement add-task"
+python3 main.py --help
 ```
 
-### Update a project
+## Sample Use Cases
 
-```bash
-python main.py update-project --project "CLI Tool" --description "Updated description"
-```
+The application includes sample data representing practical local projects:
 
-### Update a task
+- **Tea Farmers' Cooperative:** Record farmer information, track tea deliveries, and prepare payment reports.
+- **M-Pesa Shop:** Track daily sales, cash transactions, and stock levels.
+- **Fresh Produce Delivery Service:** Manage orders, coordinate deliveries, and update customer records.
 
-```bash
-python main.py update-task --task "Implement add-task" --status "in-progress"
-```
+The sample names and email addresses are fictional and intended for demonstration.
 
-## Run Tests
+## Data Storage
 
-```bash
-pytest
-```
+Project information is stored in `data/database.json`. The application uses JSON to save and retrieve user, project, and task records.
 
-## Persistence
+## Running Tests
 
-Application data is stored in:
+Run the automated tests from the project root:
 
-```text
-data/database.json
-```
+#
+pytest -q
 
-The application handles missing or malformed JSON files without crashing.
 
-## Known Issues
+The current local test run passed all 7 tests.
 
-- User and project names are used as simple CLI lookup keys.
-- This is a local learning project and does not include authentication.
-- Data is stored in one local JSON file.
+## Future Improvements
+
+- Generate project and task summary reports.
+- Add deadline reminders.
+- Improve search and filtering options.
+- Expand automated test coverage.
+- Add CSV export functionality.
+- Develop a graphical or web-based interface.
+
+## Author
+
+Rozeline Gitau
